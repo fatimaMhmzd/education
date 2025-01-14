@@ -1,0 +1,20 @@
+<?php
+
+namespace Modules\{{ module }}\App\Http\Repositories;
+
+use App\Http\Repositories\BaseRepository;
+use Modules\{{ module }}\App\Models\{{ name }};
+
+class {{ name }}Repository extends BaseRepository
+{
+
+    public function model(): string
+    {
+        return {{ name }}::class;
+    }
+
+    public function relations(): array
+    {
+        return [];
+    }
+}

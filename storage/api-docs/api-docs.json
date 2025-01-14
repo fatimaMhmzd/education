@@ -1,0 +1,43 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "tecknobay",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api": {
+            "get": {
+                "tags": [
+                    "تست"
+                ],
+                "summary": "تست",
+                "description": "تست",
+                "operationId": "38c5ef401079de0d8f27082995dd5ff8",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "تست",
+            "description": "تست"
+        }
+    ]
+}

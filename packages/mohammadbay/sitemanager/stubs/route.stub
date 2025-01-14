@@ -1,0 +1,7 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::group(['prefix' => '{{ kebab_case_module }}', 'as' => '{{ snake_case_module }}_'], function () {
+
+});

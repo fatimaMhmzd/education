@@ -1,0 +1,74 @@
+@extends('admin.layout.total')
+
+@section('style')
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard/app-assets/vendors/css/tables/datatable/datatables.min.css')}}">
+@stop
+
+@section('content')
+    <section>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header"><h4 class="card-title">{{ $componentTitle }}</h4>
+                        <div class="fonticon-container" data-toggle="modal" onclick="resetForm()" data-target="#inlineForm">
+                            <div class="fonticon-wrap"><i class="feather icon-plus-square"></i></div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body card-dashboard">
+                            <div class="table-responsive">
+                                <table class="table data-table">
+                                    <thead>
+                                    <tr>
+                                        <th>ردیف</th>
+                                        {{ $tableHeadRow }}
+                                        <th>عملیات</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade text-left" id="inlineForm" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header"><h4 class="modal-title" id="myModalLabel33">ایجاد {{ $componentName }}</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <form id="form" method="post" action="{{route('{{ $baseUrl }}_storeOrUpdate')}}">
+                    @csrf
+                    <input id="action" name="action" value="create" hidden>
+                    <input id="id" name="id" hidden>
+                    <div class="modal-body">
+                        {{ $fieldsHtml }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="submit-all-form">ثبت</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+@stop
+
+@section('script')
+    <script src="{{ asset('dashboard/app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
+    <script src="{{ asset('dashboard/app-assets/vendors/js/tables/datatable/datatables.bootstrap4.min.js')}}"></script>
+
+    <script>
+        $(document).ready(function () {
+            datatable = $('.data-table').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('{{ $baseUrl }}_list') }}",
+                columns: {{ $columns }}
+            });
+        });
+    </script>
+@stop

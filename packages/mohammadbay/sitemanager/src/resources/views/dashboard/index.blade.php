@@ -1,0 +1,1 @@
+@extends('sitemanager::layout.total')

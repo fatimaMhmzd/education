@@ -1,0 +1,28 @@
+{
+    "name": "mohammadbay/sitemanager",
+    "description": "A Laravel package for managing CRUD and migrations without coding",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mohammadbay",
+            "email": "mohammadbay2911@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "mohammadbay\\sitemanager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "mohammadbay\\sitemanager\\Providers\\sitemanagerServiceProvider"
+            ]
+        }
+    }
+}
