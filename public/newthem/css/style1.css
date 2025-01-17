@@ -1,0 +1,1315 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*font-size: 100%;
+    font: inherit;*/
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/*body {
+    line-height: 1;
+}*/
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.p-size {
+    font-size: 14px !important;
+}
+
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 900;
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_Black.eot');
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_Black.eot?#iefix') format('embedded-opentype'), url('../IRANSans/fonts/woff2/IRANSansWeb(FaNum)_Black.woff2') format('woff2'), url('../IRANSans/fonts/woff/IRANSansWeb(FaNum)_Black.woff') format('woff'), url('../IRANSans/fonts/ttf/IRANSansWeb(FaNum)_Black.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 700;
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_Bold.eot');
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'), url('../IRANSans/fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'), url('../IRANSans/fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'), url('../IRANSans/fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_Medium.eot');
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'), url('../IRANSans/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'), url('../IRANSans/fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'), url('../IRANSans/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_Light.eot');
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_Light.eot?#iefix') format('embedded-opentype'), url('../IRANSans/fonts/woff2/IRANSansWeb(FaNum)_Light.woff2') format('woff2'), url('../IRANSans/fonts/woff/IRANSansWeb(FaNum)_Light.woff') format('woff'), url('../IRANSans/fonts/ttf/IRANSansWeb(FaNum)_Light.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot');
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('embedded-opentype'), url('../IRANSans/fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'), url('../IRANSans/fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'), url('../IRANSans/fonts/ttf/IRANSansWeb(FaNum)_UltraLight.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum).eot');
+    src: url('../IRANSans/fonts/eot/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'), url('../IRANSans/fonts/woff2/IRANSansWeb(FaNum).woff2') format('woff2'), url('../IRANSans/fonts/woff/IRANSansWeb(FaNum).woff') format('woff'), url('../IRANSans/fonts/ttf/IRANSansWeb(FaNum).ttf') format('truetype')
+}
+
+body {
+    direction: rtl;
+    font-family: IRANSans;
+}
+
+.navbar-brand {
+    color: #fdd564 !important;
+}
+
+.nav-link {
+    color: grey;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #fdd564 !important;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.banner {
+    background-image: url("/indexImages/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+.banner tr {
+    border: 1px solid grey;
+    border-radius: 12px;
+}
+
+.banner td {
+    border: 1px solid grey;
+    border-radius: 12px;
+}
+*/
+
+.border-white {
+    border: 1px solid white;
+}
+
+
+.page-link {
+    color: #503e65 !important;
+}
+
+.bg-gray {
+    background-color: #f2f0f3;
+}
+
+.information-item {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.information-item i {
+    margin-bottom: 1rem;
+}
+
+.information-item-title {
+    font-size: 20px;
+}
+
+.highlight-project img {
+    max-width: 95%;
+}
+
+.highlight-project .author {
+    font-size: 12px;
+    color: gray;
+}
+
+.author {
+    font-size: 12px;
+    color: gray;
+}
+
+.suggest .author {
+    font-size: 12px;
+    color: gray;
+}
+
+.suggest .author {
+    font-size: 12px;
+    color: gray;
+}
+
+.green-text {
+    color: #fdd564;
+}
+
+.bg-purple {
+    background-color: #503e65;
+}
+
+.bg-yellow {
+    background-color: #fdd564;
+}
+
+
+.text-purple {
+    color: #5E457E;
+}
+
+.icons i {
+    border: 1px solid gray;
+    padding: 5px;
+    text-align: center;
+    min-width: 28px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+#filter-Area {
+    display: flex;
+    margin-top: 4rem;
+    flex-direction: row;
+}
+
+#filter-Area div {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#filter-Area p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.more a {
+    font-size: 14px;
+}
+
+.bg-select {
+    background: rgba(253, 254, 255, 0.6);
+}
+
+.border-footer {
+    border-bottom: 1px solid;
+    border-color: #FFCF52;
+}
+
+.border-left {
+    border-top: 1px dashed #A3A3A3;
+    border-bottom: 1px dashed #A3A3A3;
+    border-left: 1px dashed #A3A3A3;
+}
+
+
+.border-right {
+    border-top: 1px dashed #A3A3A3;
+    border-bottom: 1px dashed #A3A3A3;
+}
+
+
+.border-top-dashed {
+    border-top: 1px dashed #A3A3A3;
+}
+
+.border-bottom-dashed {
+    border-bottom: 1px dashed #A3A3A3;
+}
+
+.border-left-dashed {
+    border-left: 1px dashed #A3A3A3;
+}
+
+.border-right-dashed {
+    border-right: 1px dashed #A3A3A3;
+}
+
+
+.border-l-r {
+    border-right: 1px dashed #A3A3A3;
+    border-left: 1px dashed #A3A3A3;
+}
+
+.sm-font {
+    font-size: 12px;
+}
+
+.font-footer-p {
+    font-size: 13px;
+
+}
+
+.font-footer {
+    font-size: 14px;
+}
+
+.bd-footer a {
+    color: #757575;
+    text-decoration: none;
+}
+
+
+.custom-shape-divider-top-1670302137 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1670302137 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 67px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1670302137 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.carousel-indicatorsa button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100%;
+    background-color: #c1bebb !important;
+}
+
+/*.carousel-indicators [data-bs-target]}*/
+
+.carousel-indicatorsa .active {
+    background-color: #7c7b7f;
+}
+
+.border-purple {
+    border-color: #503e65;
+}
+
+.border-yellow {
+    border-color: #fdd564;
+}
+
+.bordered {
+    border-radius: 12px;
+}
+
+.sm-bordered {
+    border-radius: 6px;
+}
+
+.progress {
+    position: relative;
+    height: 7px;
+}
+
+.achive-progress {
+    height: 7px;
+    background-color: #fdd564;
+}
+
+.vilvilak {
+    width: 3px;
+    top: -4px;
+    bottom: -4px;
+    background-color: #503e65;
+    border-radius: 4px;
+    position: absolute;
+}
+
+/*!* IE10 *!
+progress {
+    color: #503e65;
+    border: solid 1pt #fdd564;
+    border-radius: 7px;
+    width: 90%;
+    height: 10px;
+}
+
+!* Firefox *!
+progress::-moz-progress-bar {
+    background: #503e65;
+    border: solid 1pt #fdd564;
+    border-radius: 7px;
+    width: 90%;
+    height: 10px;
+}
+
+!* Chrome *!
+progress::-webkit-progress-value {
+    background: #503e65;
+    border: solid 1pt #fdd564;
+    border-radius: 7px;
+    width: 90%;
+    height: 10px;
+}
+
+!* Polyfill *!
+progress[aria-valuenow]:before {
+    background: #503e65;
+    border: solid 1pt #fdd564;
+    border-radius: 7px;
+    width: 90%;
+    height: 10px;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress[value]::-webkit-progress-value {
+    border-radius: 2px;
+    background-size: 35px 10px, 100% 100%, 100% 100%;
+}*/
+
+.project-logo {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 10px;
+    background-color: white;
+    bottom: -30px;
+    border: 7px solid #fdd564;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-logo img {
+    max-width: 70%;
+    margin: 10px;
+    overflow: hidden
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+/*circle prgress */
+
+.circle-progress {
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative;
+}
+
+.circle-progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circle-progress > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.circle-progress .circle-progress-left {
+    left: 0;
+}
+
+.circle-progress .circle-progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 6px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+
+.circle-progress .circle-progress-left .circle-progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+
+.circle-progress .circle-progress-right {
+    right: 0;
+}
+
+.circle-progress .circle-progress-right .circle-progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+}
+
+.circle-progress .circle-progress-value {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.rounded-lg {
+    border-radius: 1rem;
+}
+
+.project-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.vertical-seperator {
+    width: 1px;
+    height: 30px;
+    background-color: gray;
+}
+
+.custom-btn {
+    background-color: #503e65;
+    color: #fdd564;
+}
+
+.carousel-item .card {
+    /*    margin-left: 1.5rem;
+        margin-right: 1.5rem;*/
+    border-radius: 12px;
+}
+
+#carouselExampleCaptionsabw .card {
+    /*margin-left: 1.5rem;
+    margin-right: 1.5rem;*/
+}
+
+.carousel-item .card-body {
+    border-radius: 12px;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-image: none;
+}
+
+/*.carousel-control-next-icon:after
+{
+    content: '>';
+    font-size: 55px;
+    color: red;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 55px;
+    color: red;
+}*/
+.right-indicator {
+    position: absolute;
+    right: -15px;
+}
+
+.left-indicator {
+    position: absolute;
+    left: -15px;
+}
+
+/*end circle progress*/
+
+
+.fadableElement {
+    opacity: 1;
+    display: block;
+    transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+}
+
+.fadeOut {
+    display: none;
+    opacity: 0;
+}
+
+.larg-text {
+
+    font-size: 22px;
+
+}
+
+.box-shadow {
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.text-gray {
+    color: grey;
+}
+
+.mt-6 {
+    margin-top: 4rem;
+}
+
+.bookmark {
+    width: 25px;
+}
+
+.project-content {
+    background-image: url('/indexImages/sarmaye2.png');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    z-index: 40;
+    margin-top: -2.5rem
+}
+
+
+.progress12{
+    position: relative;
+    margin: 4px;
+    float:left;
+    text-align: center;
+}
+.barOverflow{ /* Wraps the rotating .bar */
+    position: relative;
+    overflow: hidden; /* Comment this line to understand the trick */
+    width: 180px; height: 90px; /* Half circle (overflow) */
+    margin-bottom: -14px; /* bring the numbers up */
+}
+.bar{
+    position: absolute;
+    top: 0; left: 0;
+    width: 180px; height: 180px; /* full circle! */
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 5px solid #eee;     /* half gray, */
+    border-bottom-color: #fdd564;  /* half azure */
+    border-right-color: #fdd564;
+}
+
+
+
+
+
+
+
+
+
+/* mahvash start wallet */
+
+.wallet-title {
+    background-color: #FFD987;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.table-head {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+.money-success {
+    color: #1FC96E;
+    font-size: 18px;
+}
+
+.money-danger {
+    color: #FF4D38;
+    font-size: 18px;
+}
+
+.get-wallet {
+    color: #5E457E;
+}
+
+.get-wallet:hover {
+    color: #5E457E;
+}
+
+.btn {
+    background-color: #1FC96E;
+    color: #FDFEFF;
+}
+
+.btn:hover {
+    color: #FDFEFF;
+}
+
+.form-label {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.get-money {
+    transition: all 0.3s;
+}
+
+.card-seccond-title {
+    color: #FF4D38;
+}
+
+.list-group-item {
+    font-size: 14px;
+}
+
+.btn-money {
+    background-color: #FF4D38;
+    color: #FDFEFF;
+}
+
+.btn-money:hover {
+    color: #FDFEFF;
+}
+
+.right-div {
+    width: 100px;
+    height: 800px;
+}
+
+.right-bar {
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    width: 100px;
+    height: 800px;
+    background-color: #FFE3AD;
+}
+
+.offcanvas-body {
+    background-color: #FFE3AD;
+}
+.list-image {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.container-fluid {
+    position: relative;
+}
+
+.list-li {
+    position: absolute;
+    right: 100px;
+    z-index: 2;
+    width: 200px;
+    height: 800px;
+    background-color: #FFF6E7;
+    box-shadow: -12px 15px 20px 0px #5E457E26;
+    border-radius: 25px 0px 0px 0px;
+}
+
+.p-li {
+    transition: all 0.3s;
+    cursor: pointer;
+    border: 0px;
+    background-color: #FFF6E7;
+    font-size: 14px;
+}
+
+.p-li:hover {
+    width: 125px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #5E457E;
+    border-radius: 0px;
+}
+
+
+.list-h6 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #FFE3AD;
+}
+
+.page-title {
+    background-color: #FFD987;
+    border: 0.5px solid #C6C6C680;
+    border-radius: 8px 8px 0px 0px;
+}
+
+@media screen and (max-width:900px) {
+
+    .table-head,
+    .get-wallet,
+    .money-danger,
+    .money-success {
+        font-size: 12px;
+        width: 300px;
+    }
+}
+
+
+
+
+
+
+/* mahvash start wallet */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* scrollvbar cutstom */
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #D6D6D6;
+    border-radius: 64px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #A5A5A5;
+    border-radius: 60px;
+}
+
+
+/* btns and little cards */
+.card-subtitle {
+    font-size: 12px;
+}
+
+.icons-item {
+    margin-top: 100px;
+}
+
+.card-icon-text {
+    font-size: 12px;
+    color: #757575;
+}
+
+.btn {
+    color: #FDFEFF;
+    background-color: #503e65;
+}
+
+.send {
+    padding: 16px 24px;
+    color: #FDFEFF;
+    background-color: #5E457E;
+
+}
+
+.btn:hover {
+    color: #FDFEFF;
+}
+
+.btn:focus {
+    outline: 0px;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    outline: 0px;
+    box-shadow: none;
+}
+
+.seccond-body {
+    font-size: 14px;
+}
+
+.description {
+    font-size: 12px;
+}
+
+/* card styles */
+.card-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: #5E457E;
+}
+
+.card-link:hover {
+    color: #5E457E;
+}
+
+i {
+    font-size: 16px;
+}
+
+/* progress styles */
+.progress-bar {
+    background-color: #fdd564;
+}
+
+.rectangle {
+    height: 20px;
+    margin-left: -130px;
+}
+
+
+.project-page {
+    margin-right: 80px;
+}
+
+/* list cards in scrollbar */
+.list-items {
+    cursor: pointer;
+}
+
+.list-scroll {
+    cursor: pointer;
+    background-color: #DDCEEE;
+}
+
+/* scroll card  */
+.scroll-card {
+    direction: ltr;
+    height: 1000px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.show-grow {
+    width: 12px;
+    height: 12px;
+    margin-top: 3px;
+    border-radius: 4px;
+}
+
+.text-middle {
+    margin-right: 250px;
+}
+
+/* mr Bay css style */
+.green-text {
+    color: #fdd564;
+}
+
+.bg-purple {
+    background-color: #503e65;
+}
+
+.bg-yellow {
+    background-color: #fdd564;
+}
+
+
+.text-purple {
+    color: #5E457E;
+}
+
+.sm-font {
+    font-size: 12px;
+}
+
+.font-footer-p {
+    font-size: 13px;
+
+}
+
+.font-footer {
+    font-size: 14px;
+}
+
+.bd-footer a {
+    color: #757575;
+    text-decoration: none;
+}
+
+
+.custom-shape-divider-top-1670302137 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1670302137 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 67px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1670302137 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.carousel-indicatorsa button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 100%;
+    background-color: #c1bebb !important;
+}
+
+/*.carousel-indicators [data-bs-target]}*/
+
+.carousel-indicatorsa .active {
+    background-color: #7c7b7f;
+}
+
+
+
+/* mahvash start userProfile */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.select-card {
+    background-color: #C9B1E6;
+}
+
+.select-col {
+    cursor: pointer;
+    width: 100px;
+    height: 110px;
+    border: 0.5px solid #C9B1E6;
+    border-radius: 8px;
+    background-color: #C9B1E6;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+
+.text-75 {
+    color: #757575;
+}
+
+.text-46 {
+    color: 464646;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.text-b {
+    color: #FDFEFF;
+}
+
+
+.btn-green {
+    background-color: #1FC96E;
+    color: #FDFEFF;
+}
+
+.btn-red {
+    background-color: #FF4D38;
+    color: #FDFEFF;
+}
+
+.btn:hover {
+    color: #FDFEFF;
+
+}
+
+
+
+.main-profile {
+    background-color: #C9B1E640;
+}
+
+.card-main {
+    background-image: url('../../indexImages/icom-user-page/Rectangle\ 794.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border: 0.5px solid #C9B1E6;
+    border-radius: 8px;
+}
+
+.chart-card {
+    box-shadow: 2px 2px 9px 0px #5E457E26;
+
+}
+
+.d-inline {
+    padding-right: 6px;
+    padding-top: 0.001px;
+    padding-left: 6px;
+    padding-bottom: 0.001px;
+    border-radius: 50%;
+}
+
+
+.text-75 {
+    color: #757575;
+}
+
+.text-46 {
+    color: 464646;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-10 {
+    font-size: 10px;
+}
+
+.text-b {
+    color: #FDFEFF;
+}
+
+
+.btn-green {
+    background-color: #1FC96E;
+    color: #FDFEFF;
+}
+
+.btn-red {
+    background-color: #FF4D38;
+    color: #FDFEFF;
+}
+
+.btn:hover {
+    color: #FDFEFF;
+
+}
+
+.progress-bar {
+    width: 60%;
+    height: 8px;
+    background-color: #FFDF52;
+}
+
+.d-btn {
+    margin-top: -74px;
+}
+
+.btn-card {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #FDFEFF;
+    background-color: #5E457E;
+    padding-top: 15px;
+    border-radius: 100%;
+}
+
+.btn-image {
+    margin-bottom: 4px;
+}
+
+@media screen and (max-width:900px) {
+    .d-btn {
+        margin-top: -81px;
+    }
+}
+
+
+
+/* mahvash start userProfile */
+
+
+.nav-div{
+    position: relative;
+}
+.nav-check{
+    padding: 5px;
+    margin-top: 25px;
+    border-radius: 100%;
+    border: 2px solid #A0E426;
+}
+.nav-pause{
+    padding: 5px;
+    margin-top: 25px;
+    border-radius: 100%;
+    border: 2px solid #FBBC3E;
+}
+.nav-stop{
+    padding: 5px;
+    margin-top: 25px;
+    border-radius: 100%;
+    border: 2px solid #C6C6C6;
+}
+.page-title {
+    background-color: #FFD987;
+    border: 0.5px solid #C6C6C680;
+    border-radius: 8px 8px 0px 0px;
+}
+
+
+.text-b {
+    color: #FDFEFF;
+}
+
+.text-dangr {
+    color: #FF4D38;
+}
+
+.btn-green {
+    background-color: #1FC96E;
+    color: #FDFEFF;
+}
+
+.btn-red {
+    background-color: #FF4D38;
+    color: #FDFEFF;
+}
+
+.btn:hover {
+    color: #FDFEFF;
+
+}
+
+.btn-purple {
+    background-color: #5E457E;
+    color: #FDFEFF;
+}
+
+.main-card {
+    background-color: #FFFBF5;
+    box-shadow: 2px 2px 9px 0px #5E457E26;
+    border-radius: 8px;
+}
+
+.middle-card {
+    background-color: #FFFBF5;
+    border: 1px solid #C9B1E6;
+
+    box-shadow: 2px 2px 9px 0px #5E457E26;
+    border-radius: 8px;
+}
+
+.middle-card-two {
+    background-color: #FFFBF5;
+    border: 1px solid #FFE3AD;
+    box-shadow: 2px 2px 9px 0px #5E457E26;
+    border-radius: 8px;
+}
+
+.end-row {
+    background-color: #FFFBF5;
+    border-radius: 8px;
+    box-shadow: 2px 2px 9px 0px #5E457E26;
+}
+
+.d-btn {
+    margin-top: -74px;
+}
+
+.btn-card {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #FDFEFF;
+    background-color: #5E457E;
+    padding-top: 15px;
+    border-radius: 100%;
+}
+
+.btn-image {
+    margin-bottom: 4px;
+}
+
+.first-title {
+    margin-top: 50%;
+}
+
+#myChart {
+    transform: rotate(270deg);
+}
+
+@media screen and (max-width:900px) {
+    .d-btn {
+        margin-top: -81px;
+    }
+
+    .first-title {
+        margin-top: 5px;
+
+    }
+
+    .main-chart {
+        margin-right: 70px;
+    }
+
+    th {
+        font-size: 10px !important;
+    }
+
+    iframe {
+        height: 100px;
+    }
+}
