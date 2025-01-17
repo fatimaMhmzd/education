@@ -1,0 +1,11 @@
+{
+    "name": "ChunkUpload",
+    "alias": "chunkupload",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ChunkUpload\\Providers\\ChunkUploadServiceProvider"
+    ],
+    "files": []
+}

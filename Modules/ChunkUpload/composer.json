@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/chunkupload",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ChunkUpload\\": "",
+            "Modules\\ChunkUpload\\App\\": "app/",
+            "Modules\\ChunkUpload\\Database\\Factories\\": "database/factories/",
+            "Modules\\ChunkUpload\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\ChunkUpload\\Tests\\": "tests/"
+        }
+    }
+}
