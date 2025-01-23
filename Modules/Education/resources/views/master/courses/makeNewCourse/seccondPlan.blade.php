@@ -1,4 +1,5 @@
-@extends('education::mastersDashboard.layout.totalWithMenu')
+{{--@extends('education::mastersDashboard.layout.totalWithMenu')--}}
+@extends('education::master.layout.totalWithMenu')
 
 @section('style')
     <style>
@@ -163,7 +164,7 @@
                                        value="{{$data->properties}}">
                             </div>
                         </div>
-                        @foreach($data->qas as $qa)
+                  {{--      @foreach($data->qas as $qa)
                             <div class="row" style="margin-top: 32px">
                                 <div class="col-12" style="margin-top: 10px">
                                     <label class="form-label">سوال</label>
@@ -176,7 +177,7 @@
                                 </div>
                                 <input name="qaId[]" value="{{$qa->id}}" style="display: none">
                             </div>
-                        @endforeach
+                        @endforeach--}}
 
                         <div class="row" id="qa" style="margin-top: 32px">
                             <label class="form-label">15) سوالات متداول این دوره را با پاسخ آن اضافه کنید.</label>

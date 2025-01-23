@@ -3,10 +3,12 @@
 namespace Modules\Education\App\Http\Controllers\Master;
 
 use App\Http\Controllers\Controller;
+use Hekmatinasser\Verta\Verta;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Modules\Education\App\Models\EducationGroup;
 use Modules\Education\App\Models\EducationProduct;
@@ -48,7 +50,7 @@ class CourseController extends Controller
     }
     public function secondStep(Request $request, $id)
     {
-        $data = EducationProduct::with('qas')->find($id);
+        $data = EducationProduct::/*with('qas')->*/find($id);
         return view('education::master.courses.makeNewCourse.seccondPlan',compact('data'));
     }
     public function thirdStep(Request $request, $id)
@@ -59,8 +61,6 @@ class CourseController extends Controller
     }
     public function firstStepStore(Request $request)
     {
-
-        //return convertToMiladi($request->end);
         $this->validate($request, [
             'title' => 'required',
             'length' => 'required',
@@ -69,8 +69,9 @@ class CourseController extends Controller
             'length.required' => 'مدت زمان دوره الزامی است'
         ]);
 
-        $startDate = $request->start ? convertToMiladi($request->start) : null;
-        $endDate = $request->end ? convertToMiladi($request->end) : null;
+        $startDate = $request->start ? Verta::parse($request->start)->datetime()->format('Y-m-d H:i:s') : null;
+        $endDate = $request->end ? Verta::parse($request->end)->datetime()->format('Y-m-d H:i:s') : null;
+
 
         if ($request->id == 0) {
 
@@ -96,7 +97,7 @@ class CourseController extends Controller
             $productId = $request->id;
         }
 
-        if ($request->groupId) {
+      /*  if ($request->groupId) {
             EducationGroupProduct::where('productId',$productId)->delete();
             foreach ($request->groupId as $item) {
                 EducationGroupProduct::create([
@@ -124,7 +125,7 @@ class CourseController extends Controller
                     "permissionId" => $item,
                 ]);
             }
-        }
+        }*/
 
         Session::put('courseId', $productId);
 
