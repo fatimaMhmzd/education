@@ -1,0 +1,21 @@
+/* buttons */
+
+.btn-site {
+    color: var(--theme) !important;
+    background-color: var(--title) !important;
+}
+
+.btn-outline-site, .btn-outline {
+    color: var(--title) !important;
+    border-color: var(--title) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-site:hover {
+    color: var(--theme) !important;
+    background-color: var(--title) !important;
+}
+
+.btn-site:hover {
+    color: var(--theme) !important;
+}

@@ -1,0 +1,122 @@
+/* banner */
+#blog-banner {
+    height: 585px;
+    background-image: url("./../../image/Rectangle 2705.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.search-line {
+    top: 0;
+    left: 46px;
+    height: 46px;
+    width: 83px;
+    background-image: url("./../../image/Rectangle 2707.png");
+}
+
+/* card */
+
+.blog-card {
+    background-color: transparent !important;
+}
+
+.card-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    margin-bottom: -10px;
+    margin-right: -40px;
+    background-color: #FFE2CC;
+    transform: rotate(78.023deg);
+}
+
+.blog-card .blog-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 16px;
+    transform: rotate(40deg) !important;
+}
+
+.blog-img img {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 16px;
+    transform: rotate(250deg) !important;
+}
+
+.blog-category {
+    color: #717171;
+    font-size: 10px;
+    padding-top: 1px;
+    background-color: var(--white);
+    border-top: 2px solid var(--green);
+    border-bottom: 2px solid #E38238;
+}
+
+.blog-card-text {
+    color: #717171;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+/* carousel */
+#banner-carousel {
+    padding: 22px 50px;
+    background-color: #FE28A2;
+}
+
+
+#banner-carousel .owl-nav {
+    position: absolute;
+    top: -16px;
+    right: 0;
+}
+
+#banner-carousel .owl-prev {
+    margin-left: 10px;
+}
+
+#banner-carousel .item {
+    font-size: 14px;
+}
+
+.blog-card .text {
+    height: 72px !important;
+    overflow-y: hidden;
+}
+
+.text-spliter {
+    display: -webkit-box !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+}
+
+.bg-transparent {
+    background-color: #FE28A2 !important;
+}
+
+@media screen and (max-width: 1000px) {
+    .card-image {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {f
+    .owl-dots {
+        display: none;
+    }
+
+    .card-image, .blog-card .blog-img, .blog-img img {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .blog-card .text {
+        height: 92px !important;
+        overflow-y: hidden;
+    }
+}

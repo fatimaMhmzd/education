@@ -1,0 +1,34 @@
+/* header */
+.navbar-brand img {
+    height: 46px;
+}
+
+.nav-link {
+    color: var(--text) !important;
+    font-size: 14px !important;
+}
+
+.navbar-nav .selected {
+    border-radius: 2px;
+    color: var(--title) !important;
+    border-bottom: 2px solid var(--title);
+}
+
+
+/* mobile header */
+.header-mobile {
+    bottom: -1px !important;
+    z-index: 999 !important;
+    background-color: var(--theme);
+    box-shadow: 5px 5px 55px 0 rgba(0, 0, 0, 0.15);
+}
+
+.active {
+    font-weight: 600;
+    color: var(--title) !important;
+}
+
+.btn-phone .active, .container-fluid .btn.active {
+    color: var(--text) !important;
+    background-color: var(--title) !important;
+}

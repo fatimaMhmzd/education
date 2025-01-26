@@ -1,0 +1,32 @@
+/* text and fonts */
+.text-line {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.text-site, .card-title {
+    color: var(--title);
+}
+
+.card-text {
+    line-height: 30px;
+    color: var(--text);
+    text-align: justify;
+}
+
+.font-14 {
+    font-size: var(--medium);
+}
+
+.font-12 {
+    font-size: var(--small-medium);
+}
+
+.font-18 {
+    font-size: var(--big);
+}
+
+.text-of-detail p {
+    text-align: justify !important;
+}
